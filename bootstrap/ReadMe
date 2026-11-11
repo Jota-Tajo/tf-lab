@@ -1,0 +1,5 @@
+Part A: Create the state bucket
+
+Why a separate folder: the state bucket has to exist before any config can store state in it. 
+It’s a chicken-and-egg problem, so it gets its own small config, called a bootstrap, that keeps its own state locally. 
+It’s shared infrastructure for every future session, not part of session 3, so it lives at ~/tf-lab/bootstrap.
